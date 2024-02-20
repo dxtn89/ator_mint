@@ -1,0 +1,39 @@
+.flash-animation {
+  animation: flash 4s ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    z-index: 90;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+  }
+  70% {
+    z-index: 90;
+    opacity: 0.75;
+    width: 5%;
+    height: 5%;
+  }
+  75% {
+    z-index: 90;
+    opacity: 0.5;
+    width: 1000%;
+    height: 1000%;
+    background-color: white;
+  }
+  90% {
+    z-index: 90;
+    opacity: 0.95;
+    width: 1000%;
+    height: 1000%;
+    background-color: white;
+  }
+  100% {
+    z-index: 90;
+    opacity: 0;
+    width: 1000%;
+    height: 1000%;
+    background-color: white;
+  }
+}

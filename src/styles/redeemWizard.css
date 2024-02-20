@@ -1,0 +1,18 @@
+.line-grow {
+  animation: grow-line 0.5s linear;
+}
+
+div.line-grow:nth-of-type(2) {
+  animation-delay: 1s;
+
+  border: blue 1px solid;
+}
+
+@keyframes grow-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}

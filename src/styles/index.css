@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom ATOR fonts: use font-brand utility  */
+@layer base {
+  @font-face {
+    font-family: 'Almarena Mono Display';
+    src: url('/fonts/almarena-mono-display-light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Almarena Mono Display';
+    src: url('/fonts/almarena-mono-display-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+}
+
+/* Used on the Hero title: Glitch effect */
+
+.word:hover {
+  animation: flash-animation 0.5s linear infinite;
+}
+
+@keyframes flash-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.word:hover + span {
+  animation: glitch-animation 0.5s linear infinite;
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translateX(-8px);
+  }
+  20% {
+    transform: translateX(6px);
+  }
+  40% {
+    transform: translateX(-4px);
+  }
+  60% {
+    transform: translateX(4px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
